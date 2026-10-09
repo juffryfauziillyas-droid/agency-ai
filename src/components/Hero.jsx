@@ -42,14 +42,20 @@ const Hero = () => {
         Creating meaningful connections and turning big ideas into interactive
         digital experiences.
       </motion.div>
-      <div className="relative">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 1.0 }}
+        viewport={{ once: true }}
+        className="relative"
+      >
         <img src={assets.hero_img} alt="" className="w-full max-w-6xl" />
         <img
           src={assets.bgImage1}
           alt=""
           className="absolute -top-40 -right-40 sm:-top-100 sm:-right-70 -z-10 dark:hidden"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
